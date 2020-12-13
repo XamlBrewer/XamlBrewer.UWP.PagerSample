@@ -1,0 +1,32 @@
+﻿<Page x:Class="XamlBrewer.UWP.PagerSample.Views.PagerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:XamlBrewer.UWP.PagerSample.Views"
+      xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Background="Transparent">
+    <Grid Background="Transparent">
+        <FlipView x:Name="ImageRepeater"
+                  Background="Transparent"
+                  ItemsSource="{x:Bind Pictures}"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"
+                  SelectionChanged="ImageRepeater_SelectionChanged">
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding}"
+                           Stretch="Uniform"
+                           HorizontalAlignment="Stretch"
+                           VerticalAlignment="Stretch" />
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
+        <winui:PagerControl x:Name="Pager"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            NumberOfPages="8"
+                            SelectedIndexChanged="Pager_SelectedIndexChanged" />
+    </Grid>
+</Page>
