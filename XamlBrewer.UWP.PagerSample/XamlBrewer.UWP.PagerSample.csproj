@@ -119,6 +119,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FlipViewIndicator.cs" />
+    <Compile Include="Views\IndicatorPage.xaml.cs">
+      <DependentUpon>IndicatorPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\PipsPage.xaml.cs">
       <DependentUpon>PipsPage.xaml</DependentUpon>
     </Compile>
@@ -138,6 +142,7 @@
   <ItemGroup>
     <Content Include="Assets\About.png" />
     <Content Include="Assets\Background.jpg" />
+    <Content Include="Assets\Indicator.png" />
     <Content Include="Assets\Pager.png" />
     <Content Include="Assets\Pictures\picture_1.png" />
     <Content Include="Assets\Pictures\picture_2.png" />
@@ -163,6 +168,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\FlipViewIndicator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\IndicatorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\PipsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

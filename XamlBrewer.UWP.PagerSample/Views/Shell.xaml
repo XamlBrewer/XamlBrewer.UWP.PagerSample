@@ -40,6 +40,13 @@
                                     ShowAsMonochrome="False" />
                     </winui:NavigationViewItem.Icon>
                 </winui:NavigationViewItem>
+                <winui:NavigationViewItem Content="Indicator"
+                                          Tag="XamlBrewer.UWP.PagerSample.Views.IndicatorPage">
+                    <winui:NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="/Assets/Indicator.png"
+                                    ShowAsMonochrome="False" />
+                    </winui:NavigationViewItem.Icon>
+                </winui:NavigationViewItem>
                 <winui:NavigationViewItem Content="Pips Pager"
                                           Tag="XamlBrewer.UWP.PagerSample.Views.PipsPage">
                     <winui:NavigationViewItem.Icon>
