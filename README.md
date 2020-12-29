@@ -3,4 +3,7 @@
 Demonstrates the WinUI 2.6 (?) Pager Control.
 * Regular Pager
 * Custom Indicator Control
-* 'Pips' Paper
+* 'Pips' Pager (not yet released)
+
+![Screenshot](Assets/Pager.png?raw=true)
+![Screenshot](Assets/Indicator.png?raw=true)
