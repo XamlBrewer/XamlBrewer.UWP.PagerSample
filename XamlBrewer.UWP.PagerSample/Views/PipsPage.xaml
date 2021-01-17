@@ -14,11 +14,11 @@
                   HorizontalAlignment="Stretch"
                   VerticalAlignment="Stretch"
                   SelectionChanged="ImageRepeater_SelectionChanged">
-            <FlipView.ItemsPanel>
+            <!--<FlipView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <VirtualizingStackPanel Orientation="Vertical" />
                 </ItemsPanelTemplate>
-            </FlipView.ItemsPanel>
+            </FlipView.ItemsPanel>-->
             <FlipView.ItemTemplate>
                 <DataTemplate>
                     <Image Source="{Binding}"
@@ -28,10 +28,13 @@
                 </DataTemplate>
             </FlipView.ItemTemplate>
         </FlipView>
-        <winui:PagerControl x:Name="Pager"
-                            VerticalAlignment="Top"
-                            HorizontalAlignment="Left" 
-                            NumberOfPages="8"
-                            SelectedIndexChanged="Pager_SelectedIndexChanged" />
+        <winui:PipsPager x:Name="Pager"
+                         VerticalAlignment="Top"
+                         HorizontalAlignment="Left"
+                         NumberOfPages="8"
+                         MaxVisualIndicators="4"
+                         NextButtonVisibility="Visible"
+                         PreviousButtonVisibility="VisibleOnHover"
+                         SelectedIndexChanged="Pager_SelectedIndexChanged" />
     </Grid>
 </Page>

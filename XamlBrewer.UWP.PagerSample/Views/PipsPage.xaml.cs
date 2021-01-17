@@ -23,16 +23,14 @@ namespace XamlBrewer.UWP.PagerSample.Views
             "/Assets/Pictures/picture_8.png"
         };
 
-        private void Pager_SelectedIndexChanged(
-            WinUI.PagerControl sender, 
-            WinUI.PagerControlSelectedIndexChangedEventArgs args)
-        {
-            ImageRepeater.SelectedIndex = args.NewPageIndex;
-        }
-
         private void ImageRepeater_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Pager.SelectedPageIndex = (sender as FlipView).SelectedIndex;
+        }
+
+        private void Pager_SelectedIndexChanged(WinUI.PipsPager sender, WinUI.PipsPagerSelectedIndexChangedEventArgs args)
+        {
+            ImageRepeater.SelectedIndex = args.NewPageIndex;
         }
     }
 }
