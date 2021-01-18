@@ -12,8 +12,7 @@
                   Background="Transparent"
                   ItemsSource="{x:Bind Pictures}"
                   HorizontalAlignment="Stretch"
-                  VerticalAlignment="Stretch"
-                  SelectionChanged="ImageRepeater_SelectionChanged">
+                  VerticalAlignment="Stretch">
             <!--<FlipView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <VirtualizingStackPanel Orientation="Vertical" />
@@ -31,10 +30,10 @@
         <winui:PipsPager x:Name="Pager"
                          VerticalAlignment="Top"
                          HorizontalAlignment="Left"
-                         NumberOfPages="8"
+                         NumberOfPages="{x:Bind Pictures.Count}"
                          MaxVisualIndicators="4"
                          NextButtonVisibility="Visible"
                          PreviousButtonVisibility="VisibleOnHover"
-                         SelectedIndexChanged="Pager_SelectedIndexChanged" />
+                         SelectedPageIndex="{x:Bind ImageRepeater.SelectedIndex, Mode=TwoWay}" />
     </Grid>
 </Page>

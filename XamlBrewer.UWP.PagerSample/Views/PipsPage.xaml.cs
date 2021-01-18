@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Windows.UI.Xaml.Controls;
-using WinUI = Microsoft.UI.Xaml.Controls;
 
 namespace XamlBrewer.UWP.PagerSample.Views
 {
@@ -22,15 +21,5 @@ namespace XamlBrewer.UWP.PagerSample.Views
             "/Assets/Pictures/picture_7.png",
             "/Assets/Pictures/picture_8.png"
         };
-
-        private void ImageRepeater_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Pager.SelectedPageIndex = (sender as FlipView).SelectedIndex;
-        }
-
-        private void Pager_SelectedIndexChanged(WinUI.PipsPager sender, WinUI.PipsPagerSelectedIndexChangedEventArgs args)
-        {
-            ImageRepeater.SelectedIndex = args.NewPageIndex;
-        }
     }
 }
