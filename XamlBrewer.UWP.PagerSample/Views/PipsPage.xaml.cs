@@ -8,6 +8,9 @@ namespace XamlBrewer.UWP.PagerSample.Views
         public PipsPage()
         {
             this.InitializeComponent();
+
+            // Selects the first picture, with previous button active.
+            Pager.SelectedPageIndex = Pictures.Count;
         }
 
         public List<string> Pictures => new List<string>
@@ -21,5 +24,18 @@ namespace XamlBrewer.UWP.PagerSample.Views
             "/Assets/Pictures/picture_7.png",
             "/Assets/Pictures/picture_8.png"
         };
+
+        private void ImageRepeater_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Keeps the selection in the middle of the pager.
+            Pager.SelectedPageIndex = ImageRepeater.SelectedIndex;
+        }
+
+        private void Pager_SelectedIndexChanged(Microsoft.UI.Xaml.Controls.PipsPager sender, Microsoft.UI.Xaml.Controls.PipsPagerSelectedIndexChangedEventArgs args)
+        {
+            // Good that this doesn't create an infinite loop.
+            Pager.SelectedPageIndex = Pager.SelectedPageIndex % Pictures.Count + Pictures.Count;
+            ImageRepeater.SelectedIndex = Pager.SelectedPageIndex % Pictures.Count;
+        }
     }
 }

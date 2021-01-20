@@ -12,8 +12,7 @@
                   Background="Transparent"
                   ItemsSource="{x:Bind Pictures}"
                   HorizontalAlignment="Stretch"
-                  VerticalAlignment="Stretch"
-                  SelectionChanged="ImageRepeater_SelectionChanged">
+                  VerticalAlignment="Stretch">
             <FlipView.ItemTemplate>
                 <DataTemplate>
                     <Image Source="{Binding}"
@@ -26,7 +25,7 @@
         <winui:PagerControl x:Name="Pager"
                             VerticalAlignment="Top"
                             HorizontalAlignment="Left"
-                            NumberOfPages="8"
-                            SelectedIndexChanged="Pager_SelectedIndexChanged" />
+                            NumberOfPages="{x:Bind Pictures.Count}"
+                            SelectedPageIndex="{x:Bind ImageRepeater.SelectedIndex, Mode=TwoWay}" />
     </Grid>
 </Page>
