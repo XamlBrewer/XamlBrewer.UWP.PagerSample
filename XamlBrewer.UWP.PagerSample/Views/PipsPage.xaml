@@ -32,9 +32,9 @@
                          VerticalAlignment="Top"
                          HorizontalAlignment="Left"
                          NumberOfPages="-1"
-                         MaxVisualIndicators="5"
-                         NextButtonVisibility="Visible"
-                         PreviousButtonVisibility="Visible"
-                         SelectedIndexChanged="Pager_SelectedIndexChanged" />
+                         NextButtonVisibility="Collapsed"
+                         PreviousButtonVisibility="Collapsed"
+                         SelectedIndexChanged="Pager_SelectedIndexChanged"
+                         MaxVisiblePips="5" />
     </Grid>
 </Page>
