@@ -119,7 +119,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\FlipViewIndicator.cs" />
+    <Compile Include="Controls\FlipViewIndicator.cs" >
+      <DependentUpon>FlipViewIndicator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
