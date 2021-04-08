@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using WinUI = Microsoft.UI.Xaml.Controls;
+using System.Collections.Generic;
 using Windows.UI.Xaml.Controls;
 
 namespace XamlBrewer.UWP.PagerSample.Views
@@ -31,7 +32,7 @@ namespace XamlBrewer.UWP.PagerSample.Views
             Pager.SelectedPageIndex = ImageRepeater.SelectedIndex;
         }
 
-        private void Pager_SelectedIndexChanged(Microsoft.UI.Xaml.Controls.PipsPager sender, Microsoft.UI.Xaml.Controls.PipsPagerSelectedIndexChangedEventArgs args)
+        private void Pager_SelectedIndexChanged(WinUI.PipsPager sender, WinUI.PipsPagerSelectedIndexChangedEventArgs args)
         {
             // Good that this doesn't create an infinite loop.
             Pager.SelectedPageIndex = Pager.SelectedPageIndex % Pictures.Count + Pictures.Count;
