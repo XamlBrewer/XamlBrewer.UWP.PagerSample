@@ -23,14 +23,14 @@
             </FlipView.ItemTemplate>
         </FlipView>
         <!-- Default -->
-        <winui:PagerControl x:Name="Pager"
+        <!--<winui:PagerControl x:Name="Pager"
                             VerticalAlignment="Top"
                             HorizontalAlignment="Left"
                             NumberOfPages="{x:Bind Pictures.Count}"
-                            SelectedPageIndex="{x:Bind ImageRepeater.SelectedIndex, Mode=TwoWay}" />
+                            SelectedPageIndex="{x:Bind ImageRepeater.SelectedIndex, Mode=TwoWay}" />-->
 
         <!-- ButtonPanel -->
-        <!--<winui:PagerControl x:Name="Pager"
+        <winui:PagerControl x:Name="Pager"
                             VerticalAlignment="Top"
                             HorizontalAlignment="Left"
                             NumberOfPages="{x:Bind Pictures.Count}"
@@ -39,6 +39,6 @@
                             LastButtonVisibility="Hidden"
                             NextButtonVisibility="Hidden"
                             PreviousButtonVisibility="Hidden"
-                            DisplayMode="ButtonPanel" />-->
+                            DisplayMode="ButtonPanel" />
     </Grid>
 </Page>
